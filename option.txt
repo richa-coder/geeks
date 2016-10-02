@@ -1,0 +1,11 @@
+      /* this can convert page by page and write to the file*/
+import com.pdfcrowd.*;
+import java.io.*;
+ 
+// create an API client instance
+Client client = new Client("username", "apikey");
+
+// convert a web page and save the PDF to a file
+FileOutputStream fileStream = new FileOutputStream("google_com.pdf");
+client.convertURI("http://google.com/", fileStream);
+fileStream.close();
